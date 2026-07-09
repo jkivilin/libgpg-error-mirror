@@ -72,13 +72,14 @@
 #   label                             |  rotular
 #   terminate                         |  encerrar
 #   exit code                         |  código de saída
+#   non-compliant                     |  fora da conformidade
 #
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libgpg-error 1.56\n"
+"Project-Id-Version: libgpg-error 1.61\n"
 "Report-Msgid-Bugs-To: translations@gnupg.org\n"
-"PO-Revision-Date: 2025-10-28 22:04+0000\n"
+"PO-Revision-Date: 2026-07-09 12:10+0100\n"
 "Last-Translator: Daniel Cerqueira <dan.git@lispclub.com>\n"
 "Language-Team: Portuguese <dan.git@lispclub.com>\n"
 "Language: pt\n"
@@ -804,15 +805,11 @@ msgstr "Números hexadecimais estranhos na S-expression"
 msgid "Bad octal character in S-expression"
 msgstr "Caractere octal inválido na S-expression"
 
-#, fuzzy
-#| msgid "Invalid public key algorithm"
 msgid "Non-compliant public key algorithm"
-msgstr "Algoritmo de chave pública inválido"
+msgstr "Algoritmo de chave pública fora da conformidade"
 
-#, fuzzy
-#| msgid "No cipher algorithm"
 msgid "Non-compliant cipher algorithm"
-msgstr "Sem algoritmo de cifra"
+msgstr "Algoritmo de cifra fora da conformidade"
 
 msgid "Unexpected packet"
 msgstr "Pacote inesperado"
@@ -1078,10 +1075,8 @@ msgstr "Sem código de reset"
 msgid "Bad reset code"
 msgstr "Código de reset inválido"
 
-#, fuzzy
-#| msgid "Invalid digest algorithm"
 msgid "Non-compliant digest algorithm"
-msgstr "Algoritmo de digest inválido"
+msgstr "Algoritmo de digest fora da conformidade"
 
 msgid "System bug detected"
 msgstr "Bug de sistema detetado"
