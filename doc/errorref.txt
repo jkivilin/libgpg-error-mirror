@@ -164,6 +164,9 @@ GPG_ERR_NO_SIGNATURE_SCHEME     Invalid signature scheme
 
 GPG_ERR_INV_ATTR                Invalid attribute
 
+    GNUPG:  - An invalid system attribute name was passed to
+              gpgsm's --attribute option.
+
 
 GPG_ERR_NO_VALUE                No value
 

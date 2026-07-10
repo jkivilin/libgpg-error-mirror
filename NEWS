@@ -1,6 +1,10 @@
 Noteworthy changes in version 1.62 (unreleased) [C42/A42/R_]
 -----------------------------------------------
 
+ * Interface changes relative to the 1.60 release:
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ gpgrt_w32_set_errno                 NEW.
+
 
  Release-info: https://dev.gnupg.org/T8255
 

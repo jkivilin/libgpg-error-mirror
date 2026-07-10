@@ -260,6 +260,10 @@ mem_free2 (void *p, size_t n, int with_wipe)
 static int
 map_w32_to_errno (DWORD w32_err)
 {
+  /* FIXME: We should also integrate WSA error codes because they map
+   * one to one to their Windows standard error codes colleagues.
+   * However we need to decide how to map them to the ERRNO.  Maybe
+   * with the help of ReactOS again.  */
   switch (w32_err)
     {
     case 0:
