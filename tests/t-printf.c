@@ -469,12 +469,15 @@ check_large_float (void)
     show ("format \"%%.100Lf\" with DBL_MAX: ->%s<-\n", buf);
   gpgrt_free (buf);
 
-# ifdef HAVE_LONG_DOUBLE_WIDER
+# if defined(__powerpc64__) && LDBL_MANT_DIG == 106
+  if (verbose)
+    show ("IBM double-double - skipping LDBL_MAX test\n");
+# elif defined(HAVE_LONG_DOUBLE_WIDER)
   ld = LDBL_MAX;
   buf = gpgrt_bsprintf ("%.100Lf\n", ld);
   if (buf)
     {
-      fail ("format \"%%.100Lf\" with LDBL_MAX unexpectly did not fail\n");
+      fail ("format \"%%.100Lf\" with LDBL_MAX unexpectedly did not fail\n");
     }
   else if (verbose)
     show ("format \"%%.100Lf\" with LDBL_MAX failed as expected\n");
