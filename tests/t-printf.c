@@ -469,7 +469,7 @@ check_large_float (void)
     show ("format \"%%.100Lf\" with DBL_MAX: ->%s<-\n", buf);
   gpgrt_free (buf);
 
-# if defined(__powerpc64__) && LDBL_MANT_DIG == 106
+# if defined(_ARCH_PPC) && LDBL_MANT_DIG == 106
   if (verbose)
     show ("IBM double-double - skipping LDBL_MAX test\n");
 # elif defined(HAVE_LONG_DOUBLE_WIDER)
