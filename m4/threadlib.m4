@@ -212,6 +212,8 @@ AC_DEFUN([gl_PTHREADLIB_BODY],
       gl_pthread_in_glibc=no
       # On Linux with glibc >= 2.34, libc contains the fully functional
       # pthread functions.
+      # On Hurd with glibc >= 2.43, libc contains the fully functional
+      # pthread functions.
       AS_CASE([$host_os],
         [linux*],
          [
@@ -219,6 +221,19 @@ AC_DEFUN([gl_PTHREADLIB_BODY],
             [#include <features.h>
              #ifdef __GNU_LIBRARY__
               #if (__GLIBC__ == 2 && __GLIBC_MINOR__ >= 34) || (__GLIBC__ > 2)
+               Lucky user
+              #endif
+             #endif
+            ],
+            [gl_pthread_in_glibc=yes],
+            [])
+         ],
+        [gnu*],
+         [
+          AC_EGREP_CPP([Lucky user],
+            [#include <features.h>
+             #ifdef __GNU_LIBRARY__
+              #if (__GLIBC__ == 2 && __GLIBC_MINOR__ >= 43) || (__GLIBC__ > 2)
                Lucky user
               #endif
              #endif
